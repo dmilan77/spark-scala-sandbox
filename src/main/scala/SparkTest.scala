@@ -41,8 +41,8 @@ object SparkTest {
      .option("inferSchema", "true")
      .option("quoteMode", "NON_NUMERIC")
      .option("timestampformat", "yyyy/mm/dd")
-     .save("hdfs://nameservice1/dv/hdfsdata/vs2/ebp/hqx1/phi/all_lob/r000/work/hqx_clm_extract.tsv")
-   merge("file:/tmp/milan/out/hqx_clm_extract.tsv", "hdfs://nameservice1/dv/hdfsdata/vs2/ebp/hqx1/phi/all_lob/r000/work/hqx_clm_extract.tsv")
+     .save("hdfs://nameservice1/user/cloudera/employee.tsv")
+   merge("file:/tmp/cloudera/out/employee.tsv", "hdfs://nameservice1/user/cloudera/employee.tsv")
    scala.util.Try(hiveContext.dropTempTable(tempTableName))
 
 
