@@ -10,7 +10,7 @@ object SparkTest {
  def main(args: Array[String]): Unit = {
   implicit val sc = new SparkContext()
   val hiveContext = new HiveContext(sc)
-  val outputDF = hiveContext.sql("select * from dv_ebphqx1ph_allob_r000_wh.hqx_clm_extract limit 10")
+  val outputDF = hiveContext.sql("select * from employee limit 10")
    val col_select_list = outputDF.schema.fields
      .map(structField => {
        structField.dataType match {
